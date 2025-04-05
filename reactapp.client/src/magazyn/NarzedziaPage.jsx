@@ -103,7 +103,7 @@ export const Narzedzia = () => {
                                 <Col xs={12} md={1} className="d-flex align-items-end justify-content-end">
                                     <div className="d-flex w-100">
                                         <Button variant="primary" size="sm" className="me-2 w-100">Szukaj</Button>
-                                        <Button variant="secondary" size="sm" className="w-100">Anuluj</Button>
+                                        <Button variant="danger" size="sm" className="w-100">Anuluj</Button>
                                     </div>
                                 </Col>
                             </Row>

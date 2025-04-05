@@ -13,7 +13,7 @@ export const Narzedzie = () => {
                 <Row className="mt-3">
                     <Col>
                         <Button variant="primary" className="me-2">Dodaj</Button>
-                        <Button variant="primary">Anuluj</Button>
+                        <Button variant="danger">Anuluj</Button>
                     </Col>
                 </Row>
                 <Row className="mt-4">
