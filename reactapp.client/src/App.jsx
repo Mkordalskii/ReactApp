@@ -82,7 +82,7 @@ function App() {
                             <YAxis />
                             <Tooltip />
                             <Legend />
-                            <Bar dataKey="narzedzia" fill="#0d6efd" />
+                            <Bar dataKey="narzedzia" name="Narzędzia" fill="#0d6efd" />
                         </BarChart>
                     </ResponsiveContainer>
                 </div>

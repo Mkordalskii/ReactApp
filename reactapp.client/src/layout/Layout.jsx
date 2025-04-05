@@ -7,6 +7,7 @@ import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+
 export function Layout() {
     const location = useLocation();
 

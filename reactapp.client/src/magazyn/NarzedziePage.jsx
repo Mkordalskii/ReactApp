@@ -10,13 +10,13 @@ export const Narzedzie = () => {
     return (
         <Container fluid>
             <Form>
-                <Row>
+                <Row className="mt-3">
                     <Col>
-                        <Button variant="primary" className="me-2">Zapisz</Button>
+                        <Button variant="primary" className="me-2">Dodaj</Button>
                         <Button variant="primary">Anuluj</Button>
                     </Col>
                 </Row>
-                <Row className="mt-5">
+                <Row className="mt-4">
                     <Tabs
                         defaultActiveKey="danePodstawowe"
                         className="mb-3"
@@ -48,9 +48,10 @@ export const Narzedzie = () => {
                                         <Form.Label>Kategorie</Form.Label>
                                         <Form.Select>
                                             <option>Wybierz</option>
-                                            <option value="1">Cegly</option>
-                                            <option value="2">Wylewki</option>
-                                            <option value="3">Farby</option>
+                                            <option value="1">Tokarki</option>
+                                            <option value="2">Frezarki</option>
+                                            <option value="3">Wiertła</option>
+                                            <option value="3">Gwintowniki</option>
                                         </Form.Select>
                                     </Form.Group>
                                 </Col>
@@ -89,12 +90,6 @@ export const Narzedzie = () => {
                                 <Col className="col-8">
                                     <Form.Group className="mb-3">
                                         <Form.Label>Dodatkowe informacje</Form.Label>
-                                        <Form.Control as="textarea" />
-                                    </Form.Group>
-                                </Col>
-                                <Col>
-                                    <Form.Group>
-                                        <Form.Label>Uwagi</Form.Label>
                                         <Form.Control as="textarea" />
                                     </Form.Group>
                                 </Col>
