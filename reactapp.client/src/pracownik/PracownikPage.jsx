@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Form from 'react-bootstrap/Form';
@@ -7,6 +8,33 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
 export const Pracownik = () => {
+    const [netto, setNetto] = useState('');
+    const [brutto, setBrutto] = useState('');
+
+    const handleNettoChange = (e) => {
+        const value = e.target.value;
+        setNetto(value);
+
+        const number = parseFloat(value.replace(',', '.'));
+        if (!isNaN(number)) {
+            setBrutto((number * 1.33).toFixed(2));
+        } else {
+            setBrutto('');
+        }
+    };
+
+    const handleBruttoChange = (e) => {
+        const value = e.target.value;
+        setBrutto(value);
+
+        const number = parseFloat(value.replace(',', '.'));
+        if (!isNaN(number)) {
+            setNetto((number / 1.33).toFixed(2));
+        } else {
+            setNetto('');
+        }
+    };
+
     return (
         <Container fluid>
             <Form>
@@ -66,13 +94,21 @@ export const Pracownik = () => {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label>Netto</Form.Label>
-                                        <Form.Control type="text" />
+                                        <Form.Control
+                                            type="text"
+                                            value={netto}
+                                            onChange={handleNettoChange}
+                                        />
                                     </Form.Group>
                                 </Col>
                                 <Col>
                                     <Form.Group>
                                         <Form.Label>Brutto</Form.Label>
-                                        <Form.Control type="text" />
+                                        <Form.Control
+                                            type="text"
+                                            value={brutto}
+                                            onChange={handleBruttoChange}
+                                        />
                                     </Form.Group>
                                 </Col>
                             </Row>
