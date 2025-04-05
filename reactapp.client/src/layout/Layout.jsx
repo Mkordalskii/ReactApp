@@ -14,82 +14,92 @@ export function Layout() {
 
     return (
         <div className="app">
-            <Navbar expand="lg" className="bg-body-tertiary">
-                <Container fluid>
-                    <Navbar.Brand as={NavLink} to="/" className="d-block">
-                        <Image src="/image/logo.png" className="logo" />
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
-                        <Nav variant="tabs" className="mx-auto" navbarScroll>
-                            <Nav.Item>
-                                <Nav.Link
-                                    as={NavLink}
-                                    to="/"
-                                    end
-                                    className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+            <header>
+                <Navbar expand="lg" className="bg-body-tertiary">
+                    <Container fluid>
+                        <Navbar.Brand as={NavLink} to="/" className="d-block">
+                            <Image src="/image/logo.png" className="logo" />
+                        </Navbar.Brand>
+                        <Navbar.Toggle aria-controls="navbarScroll" />
+                        <Navbar.Collapse id="navbarScroll">
+                            <Nav variant="tabs" className="mx-auto" navbarScroll>
+                                <Nav.Item>
+                                    <Nav.Link
+                                        as={NavLink}
+                                        to="/"
+                                        end
+                                        className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+                                    >
+                                        Start
+                                    </Nav.Link>
+                                </Nav.Item>
+
+                                <NavDropdown
+                                    title="Magazyn"
+                                    id="magazyn"
+                                    className={isActive(['/narzedzia', '/narzedzie']) ? 'active-tab' : ''}
                                 >
-                                    Start
-                                </Nav.Link>
-                            </Nav.Item>
+                                    <NavDropdown.Item as={NavLink} to="/narzedzia">
+                                        Narzędzia
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/narzedzie">
+                                        Dodaj narzędzie
+                                    </NavDropdown.Item>
+                                </NavDropdown>
 
-                            <NavDropdown
-                                title="Magazyn"
-                                id="magazyn"
-                                className={isActive(['/narzedzia', '/narzedzie']) ? 'active-tab' : ''}
-                            >
-                                <NavDropdown.Item as={NavLink} to="/narzedzia">
-                                    Narzędzia
-                                </NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/narzedzie">
-                                    Dodaj narzędzie
-                                </NavDropdown.Item>
-                            </NavDropdown>
+                                <NavDropdown
+                                    title="Kadry"
+                                    id="kadry"
+                                    className={isActive(['/pracownicy', '/pracownik']) ? 'active-tab' : ''}
+                                >
+                                    <NavDropdown.Item as={NavLink} to="/pracownicy">
+                                        Pracownicy
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/pracownik">
+                                        Dodaj pracownika
+                                    </NavDropdown.Item>
+                                </NavDropdown>
 
-                            <NavDropdown
-                                title="Kadry"
-                                id="kadry"
-                                className={isActive(['/pracownicy', '/pracownik']) ? 'active-tab' : ''}
-                            >
-                                <NavDropdown.Item as={NavLink} to="/pracownicy">
-                                    Pracownicy
-                                </NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/pracownik">
-                                    Dodaj pracownika
-                                </NavDropdown.Item>
-                            </NavDropdown>
+                                <NavDropdown
+                                    title="Zamówienia"
+                                    id="zamowienia"
+                                    className={isActive(['/zamowienia']) ? 'active-tab' : ''}
+                                >
+                                    <NavDropdown.Item as={NavLink} to="/zamowienia">
+                                        Lista zamówień
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/zamowienie">
+                                        Dodaj zamówienie
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                            </Nav>
+                            <Form className="d-flex">
+                                <Form.Control
+                                    type="search"
+                                    placeholder="Szukaj"
+                                    className="me-2"
+                                    aria-label="Search"
+                                />
+                                <Button variant="primary">Szukaj</Button>
+                            </Form>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
+            </header>
 
-                            <NavDropdown
-                                title="Zamówienia"
-                                id="zamowienia"
-                                className={isActive(['/zamowienia']) ? 'active-tab' : ''}
-                            >
-                                <NavDropdown.Item as={NavLink} to="/zamowienia">
-                                    Lista zamówień
-                                </NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/zamowienie">
-                                    Dodaj zamówienie
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav>
-                        <Form className="d-flex">
-                            <Form.Control
-                                type="search"
-                                placeholder="Szukaj"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="primary">Szukaj</Button>
-                        </Form>
-                    </Navbar.Collapse>
+            <main>
+                <div className="px-3">
+                    <Container fluid>
+                        <Outlet />
+                    </Container>
+                </div>
+            </main >
+            <footer className="text-center text-muted py-3 bg-light">
+                <Container>
+                    <small>© {new Date().getFullYear()} Magazyn Narzędzi CNC by Maciej Kordalski : Aplikacje biznesowe gr. A</small>
                 </Container>
-            </Navbar>
-
-            <div className="px-3">
-                <Container fluid>
-                    <Outlet />
-                </Container>
-            </div>
+            </footer>
         </div>
+        
     );
 }

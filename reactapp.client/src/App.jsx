@@ -69,7 +69,7 @@ function App() {
                     </Card>
                 </Col>
             </Row>
-            <Row>
+            <Row className="mb-5">
                 <div style={{ width: '100%', height: 400 }}>
                     <h2>Wykres użycia narzędzi</h2>
                     <ResponsiveContainer>
