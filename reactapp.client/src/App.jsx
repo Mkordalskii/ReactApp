@@ -25,6 +25,11 @@ const data = [
 function App() {
     return (
         <Container fluid>
+            <Row className="mb-4 mt-3 text-center">
+                <Col>
+                    <h2 className="fw-light text-muted">Witaj w systemie zarządzania narzędziami CNC</h2>
+                </Col>
+            </Row>
             <Row>
                 <Col className="mb-3">
                     <Card>
@@ -65,6 +70,32 @@ function App() {
                                 alt="segregatory"
                                 />
                             </Link>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+            <Row className="mb-4">
+                <Col>
+                    <Card bg="light" text="dark" className="text-center">
+                        <Card.Body>
+                            <Card.Title>🛠️ Narzędzi</Card.Title>
+                            <Card.Text className="display-6">154</Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card bg="light" text="dark" className="text-center">
+                        <Card.Body>
+                            <Card.Title>👨‍🔧 Pracowników</Card.Title>
+                            <Card.Text className="display-6">27</Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card bg="light" text="dark" className="text-center">
+                        <Card.Body>
+                            <Card.Title>📦 Zamówień</Card.Title>
+                            <Card.Text className="display-6">12</Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
