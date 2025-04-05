@@ -89,6 +89,42 @@ export const Pracownik = () => {
                             </Row>
                         </Tab>
 
+                        <Tab eventKey="adres" title="Adres">
+                            <Row className="mb-3">
+                                <Col xs={4} md={2}>
+                                    <Form.Group>
+                                        <Form.Label>Kraj</Form.Label>
+                                        <Form.Control
+                                            type="text" />
+                                    </Form.Group>
+                                </Col>
+                                <Col xs={4} md={2}>
+                                    <Form.Group>
+                                        <Form.Label>Kod pocztowy</Form.Label>
+                                        <Form.Control type="text"/>
+                                    </Form.Group>
+                                </Col>
+                                <Col xs={4} md={2}>
+                                    <Form.Group>
+                                        <Form.Label>Miasto</Form.Label>
+                                        <Form.Control type="text" />
+                                    </Form.Group>
+                                </Col>
+                                <Col xs={4} md={2}>
+                                    <Form.Group>
+                                        <Form.Label>Ulica</Form.Label>
+                                        <Form.Control type="text" />
+                                    </Form.Group>
+                                </Col>
+                                <Col xs={4} md={2}>
+                                    <Form.Group>
+                                        <Form.Label>Numer domu</Form.Label>
+                                        <Form.Control type="text" />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                        </Tab>
+
                         <Tab eventKey="cena" title="Wynagrodzenie">
                             <Row className="mb-3">
                                 <Col>
