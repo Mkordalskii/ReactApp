@@ -73,13 +73,13 @@ export const Narzedzie = () => {
                                 </Col>
                                 <Col>
                                     <Form.Group>
-                                        <Form.Label>VAT Sprzedazy</Form.Label>
+                                        <Form.Label>VAT Sprzedaży</Form.Label>
                                         <Form.Control type="text" />
                                     </Form.Group>
                                 </Col>
                                 <Col>
                                     <Form.Group>
-                                        <Form.Label>Cena domyslna</Form.Label>
+                                        <Form.Label>Cena domyślna</Form.Label>
                                         <Form.Control type="text" />
                                     </Form.Group>
                                 </Col>

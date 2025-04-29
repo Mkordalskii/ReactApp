@@ -100,8 +100,8 @@ export const Narzedzia = () => {
                                     </Form.Group>
                                 </Col>
 
-                                <Col xs={12} md={1} className="d-flex align-items-end justify-content-end">
-                                    <div className="d-flex w-100">
+                                <Col xs={12} md={2} className="d-flex align-items-end justify-content-end">
+                                    <div className="d-flex w-100 mt-2">
                                         <Button variant="primary" size="sm" className="me-2 w-100">Szukaj</Button>
                                         <Button variant="danger" size="sm" className="w-100">Anuluj</Button>
                                     </div>
