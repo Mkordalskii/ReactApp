@@ -85,7 +85,7 @@ export const Zamowienie = () => {
                     </Col>
                 </Row>
                 <Row className="mt-3">
-                    <Tabs defaultActiveKey="danePodstawowe" className="mb-3">
+                    <Tabs defaultActiveKey="wyborNarzedzi" className="mb-3">
                         <Tab eventKey="wyborNarzedzi" title="Wybór narzędzi">
                             <Row className="mb-3">
                                 <Col>

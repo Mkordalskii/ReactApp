@@ -79,7 +79,7 @@ export const Narzedzie = () => {
                                 </Col>
                                 <Col>
                                     <Form.Group>
-                                        <Form.Label>Cena domyślna</Form.Label>
+                                        <Form.Label>Cena domylna</Form.Label>
                                         <Form.Control type="text" />
                                     </Form.Group>
                                 </Col>
