@@ -76,7 +76,7 @@ function App() {
             </Row>
             <Row className="mb-4">
                 <Col>
-                    <Card className="text-center">
+                    <Card bg="light" text="dark" className="text-center">
                         <Card.Body>
                             <Card.Title>🛠️ Narzędzi</Card.Title>
                             <Card.Text className="display-6">154</Card.Text>
@@ -84,7 +84,7 @@ function App() {
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="text-center">
+                    <Card bg="light" text="dark" className="text-center">
                         <Card.Body>
                             <Card.Title>👨‍🔧 Pracowników</Card.Title>
                             <Card.Text className="display-6">27</Card.Text>
@@ -92,7 +92,7 @@ function App() {
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="text-center">
+                    <Card bg="light" text="dark" className="text-center">
                         <Card.Body>
                             <Card.Title>📦 Zamówień</Card.Title>
                             <Card.Text className="display-6">12</Card.Text>

@@ -14,7 +14,6 @@ import { Zamowienie } from './zamowienie/ZamowieniePage.jsx';
 import { Zamowienia } from './zamowienie/ZamowieniaPage.jsx';
 import { Layout } from './layout/Layout.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ThemeProvider } from './ThemeContext';
 
 //const router = createBrowserRouter([
 //    {
@@ -43,7 +42,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         {/*<RouterProvider router={router} />*/}
         <BrowserRouter>
-        <ThemeProvider>
             <Routes>
                 <Route path='/' element={<Layout />}>
                     <Route index element={<App />} />
@@ -68,7 +66,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     <Route index element={<Zamowienie />} />
                 </Route>
             </Routes>
-                </ThemeProvider>
-    </BrowserRouter >
+        </BrowserRouter >
     </React.StrictMode>
 )

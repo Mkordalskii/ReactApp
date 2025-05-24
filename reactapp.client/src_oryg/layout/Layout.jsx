@@ -6,12 +6,10 @@ import Image from 'react-bootstrap/Image';
 import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { useTheme } from '../ThemeContext';
 
 
 export function Layout() {
     const location = useLocation();
-    const { darkMode, setDarkMode } = useTheme();
 
     const isActive = (paths) => paths.some(path => location.pathname.startsWith(path));
 
@@ -84,13 +82,6 @@ export function Layout() {
                                     aria-label="Search"
                                 />
                                 <Button variant="primary">Szukaj</Button>
-                                <Button
-                                    variant={darkMode ? 'light' : 'dark'}
-                                    className="ms-2"
-                                    onClick={() => setDarkMode(!darkMode)}
-                                >
-                                    {darkMode ? 'Jasny' : 'Ciemny'} tryb
-                                </Button>
                             </Form>
                         </Navbar.Collapse>
                     </Container>

@@ -8,9 +8,9 @@ import Col from 'react-bootstrap/Col';
 
 const initialOrders = [
     { id: 1, data: '2024-05-01', kwota: 950, termin: '2024-05-15', narzedzia: 'Noże tokarskie zewnętrzne 1, Noże tokarskie zewnętrzne 2, Wiertło uniwersalne 1', zamawiajacy: 'Adam Kot' },
-    { id: 2, data: '2025-05-03', kwota: 1380, termin: '2025-05-18', narzedzia: 'Głowica frezarska 1, Wytaczadło 1, Płytka frezarska 1', zamawiajacy: 'Anna Kowalska' },
-    { id: 3, data: '2025-05-05', kwota: 480, termin: '2025-05-20', narzedzia: 'Kamień szlifierski 1, Kamień szlifierski 2', zamawiajacy: 'Piotr Nowak' },
-    { id: 4, data: '2026-05-07', kwota: 610, termin: '2026-05-22', narzedzia: 'Nóż tokarski wewnętrzny 1, Płytka tokarska 1', zamawiajacy: 'Katarzyna Zak' },
+    { id: 2, data: '2024-05-03', kwota: 1380, termin: '2024-05-18', narzedzia: 'Głowica frezarska 1, Wytaczadło 1, Płytka frezarska 1', zamawiajacy: 'Anna Kowalska' },
+    { id: 3, data: '2024-05-05', kwota: 480, termin: '2024-05-20', narzedzia: 'Kamień szlifierski 1, Kamień szlifierski 2', zamawiajacy: 'Piotr Nowak' },
+    { id: 4, data: '2024-05-07', kwota: 610, termin: '2024-05-22', narzedzia: 'Nóż tokarski wewnętrzny 1, Płytka tokarska 1', zamawiajacy: 'Katarzyna Zak' },
 ];
 
 export const Zamowienia = () => {
